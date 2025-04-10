@@ -46,13 +46,19 @@ a:hover {
 }
 
 input {
-  font:inherit
+  font:inherit;
+  display: grid;
+  grid-template-columns: auto lfr
 }
 
 textarea {
-  font:inherit
+  font:inherit;
+  display: grid;
+  grid-template-columns: auto lfr
 }
 
 button {
-  font:inherit
+  font:inherit;
+  display: grid;
+  grid-template-columns: auto lfr
 }

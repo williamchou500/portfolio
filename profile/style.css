@@ -46,13 +46,25 @@ a:hover {
 }
 
 input {
-  font:inherit
+  font:inherit;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 5px
 }
 
 textarea {
   font:inherit
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 5px
 }
 
 button {
   font:inherit
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-block: 5px
 }
