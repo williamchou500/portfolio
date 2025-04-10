@@ -9,6 +9,10 @@ body {
     background-color: powderblue;
   }
 
+h1 {
+  color: red
+}
+
 :root {
   --color-accent:oklch(65% 50% 0)
 }
