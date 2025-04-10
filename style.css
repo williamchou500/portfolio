@@ -6,6 +6,7 @@ body {
     max-width:100ch;
     margin-inline: auto;
     padding: 20px;
+    background-color: powderblue;
   }
 
 :root {
