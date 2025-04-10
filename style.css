@@ -8,6 +8,17 @@ body {
     padding: 20px;
   }
 
+  h1 {
+    line-height: 1.1;
+    font-size: 4em;
+    text-wrap: balance
+  }
+  
+  h2, h3, h4, h5, h6 {
+    line-height: 1.1;
+    text-wrap: balance;
+  }
+
 :root {
   --color-accent:oklch(65% 50% 0)
 }
@@ -117,33 +128,73 @@ div.projects {
   gap: 1em;
 }
 
-h1 {
-  line-height: 1.1;
-  font-size: 4em;
-  text-wrap: balance
+article.CV {
+  display: grid;
+  grid-template-columns: 2;
+  gap: 1em;
 }
 
-h2 {
-  line-height: 1.1;
-  text-wrap: balance;
+.about_me {
+  display: block;
+  grid-template-rows: subgrid;
+  grid-column: 1;
+  grid-row: 1;
+  gap: 1em
 }
 
-h3 {
-  line-height: 1.1;
-  text-wrap: balance;
+.education {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 1;
+  grid-row: 2;
+  gap: 1em
 }
 
-h4 {
-  line-height: 1.1;
-  text-wrap: balance;
+.experience {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 1;
+  grid-row: 3;
+  gap: 1em
 }
 
-h5 {
-  line-height: 1.1;
-  text-wrap: balance;
+.skills {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 2;
+  grid-row: 1;
+  gap: 1em
 }
 
-h6 {
-  line-height: 1.1;
-  text-wrap: balance;
+.projects {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 2;
+  grid-row: 2;
+  gap: 1em
+}
+
+.contact {
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-column: 2;
+  grid-row: 3;
+  gap: 1em
+}
+
+a.recipes_project:hover {
+  font-weight: bolder;
+  color: yellow;
+  border-bottom-width: 0.4em;
+  border-bottom-style: groove;
+  border-bottom-color: pink;
+}
+
+a.vehicles_project:hover {
+  text-decoration: none;
+  background: linear-gradient(black, white);
+  color: black;
+  border-bottom-width: 0.2em;
+  border-bottom-style: dashed;
+  border-bottom-color: red;
 }
