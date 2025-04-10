@@ -3,4 +3,18 @@ body {
          and use the OS’s UI font as the website font
        */
     font: 100%/1.5 system-ui;
+    max-width:100ch;
+    margin-inline: auto;
+    padding: 20px;
   }
+
+:root {
+  --color-accent:oklch(65% 50% 0)
+}
+
+a:hover {
+  border-bottom-width: 0.4em;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-accent);
+  accent-color: var(--color-accent);
+}
