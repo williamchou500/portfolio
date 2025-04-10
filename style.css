@@ -20,7 +20,7 @@ nav {
   border-bottom-color: oklch(80% 3% 200);
 }
 
-a {
+a.nav {
   flex: 1;
   text-decoration: none;
   color: inherit;
