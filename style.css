@@ -198,3 +198,22 @@ a.vehicles_project:hover {
   border-bottom-style: dashed;
   border-bottom-color: red;
 }
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltip .tooltipimage {
+  position: absolute;
+  visibility: hidden;
+  bottom: 100%;
+  z-index: 9999;
+  float:inline-end
+}
+
+.tooltip:hover .tooltipimage {
+  visibility: visible;
+  display: block;
+}
