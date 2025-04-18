@@ -9,7 +9,7 @@
 </head>
 <body>
     <script type="module">
-        import "../global.js";
+        import "./global.js";
 
         const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
             ? "/"                  // Local server
@@ -46,16 +46,31 @@
             }
         }
 
-        // let navLinks = $$("nav a");
+        document.body.insertAdjacentHTML(
+            'afterbegin',
+            `
+                <label class="color-scheme">
+                    Theme:
+                    <select>
+                        <option value='light dark'>Automatic</option>
+                        <option value='light'>Light</option>
+                        <option value='dark'>Dark</option>
+                    </select>
+                </label>`,
+            );
 
-        // let currentLink = navLinks.find(
-        //     (a) => a.host === location.host && a.pathname === location.pathname,
-        // );
+        let select = document.querySelector("label.color-scheme select")
+        
+        select.addEventListener('input', function (event) {
+            console.log('color scheme changed to', event.target.value);
+            document.documentElement.style.setProperty('color-scheme', event.target.value);
+            localStorage.colorScheme = event.target.value;
+        });
 
-        // if (currentLink) {
-        //     currentLink.classList.add('current');
-        // }
-    </script>
+        if ("colorScheme" in localStorage) {
+            select.value = localStorage.colorScheme;
+            document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+        }
     <h1>Contact</h1>
     <form action="mailto:jankytubba@gmail.com" method="POST" enctype="text/plain">
         <label>Email: <input name="email" type="email"></label>

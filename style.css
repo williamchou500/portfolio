@@ -1,3 +1,7 @@
+html {
+  color-scheme: light dark;
+}
+
 body {
     /* Set line height to 1.5 times the font size
          and use the OS’s UI font as the website font
@@ -20,7 +24,8 @@ body {
   }
 
 :root {
-  --color-accent:oklch(65% 50% 0)
+  --color-accent:oklch(65% 50% 0);
+  color-scheme: dark;
 }
 
 nav {
@@ -28,7 +33,7 @@ nav {
   margin-bottom: 5px;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
 a {
@@ -56,7 +61,7 @@ a:hover {
   border-bottom-style: solid;
   border-bottom-color: var(--color-accent);
   accent-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 a.current:hover {
@@ -64,7 +69,7 @@ a.current:hover {
   border-bottom-style: solid;
   border-bottom-color: var(--color-accent);
   accent-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 form {
@@ -111,6 +116,10 @@ button {
   display: grid;
   grid-template-columns: subgrid;
   gap: 1em
+}
+
+select {
+  font: inherit;
 }
 
 div.projects {
@@ -220,4 +229,13 @@ a.vehicles_project:hover {
 .tooltip:hover .tooltipimage {
   visibility: visible;
   display: block;
+}
+
+label.color-scheme {
+  display: block; 
+  position: absolute;
+  top: 10px;
+  right: 1rem;
+  font-family: inherit;
+  font-size: 80%;
 }

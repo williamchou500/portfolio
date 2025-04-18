@@ -46,6 +46,32 @@
             }
         }
 
+        document.body.insertAdjacentHTML(
+            'afterbegin',
+            `
+                <label class="color-scheme">
+                    Theme:
+                    <select>
+                        <option value='light dark'>Automatic</option>
+                        <option value='light'>Light</option>
+                        <option value='dark'>Dark</option>
+                    </select>
+                </label>`,
+            );
+
+        let select = document.querySelector("label.color-scheme select")
+        
+        select.addEventListener('input', function (event) {
+            console.log('color scheme changed to', event.target.value);
+            document.documentElement.style.setProperty('color-scheme', event.target.value);
+            localStorage.colorScheme = event.target.value;
+        });
+
+        if ("colorScheme" in localStorage) {
+            select.value = localStorage.colorScheme;
+            document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
+        }
+
         // let navLinks = $$("nav a");
 
         // let currentLink = navLinks.find(
@@ -57,8 +83,7 @@
         // }
     </script>
     <h1>William Chou</h1>
-    <p>I like playing games, and I think oatmeal raisin cookies are the best kind of cookie. I was born on June 2nd, 2005 and am currently 19 years old. Some of my favorite games are Omori, Oneshot, Neon White, Persona 4 Golden, and Ace Attorney. I hate Marvel Rivals.</p>
+    <p>I like playing games, and I drink lactose free milk despite not being lactose intolerant. I was born on June 2nd, 2005 and am currently 19 years old. Sometimes I think about who would be the first person I see after waking up in a hospital bed after suffering a heart attack or other affliction. I hate Elphelt players.</p>
     <img src="images/chipeyes.jpg" alt='A picture of me with casino chips over my eyes' width="300">
-    <p>I guess you could say I have an eye for gambling. I think my dad stole these from a casino.</p>
-</body>
+    <p>I prefer potato chips. I've won $2 dollars from gambling this year.
 </html>
