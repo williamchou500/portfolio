@@ -15,6 +15,19 @@
         <a class="nav" href="https://williamchou500.github.io/portfolio/contact">Contact</a>
         <a class="nav" href="https://github.com/williamchou500" target="_blank">GitHub</a>
     </nav>
+    <script type="module">
+        import "./global.js";
+        
+        let navLinks = $$("nav a");
+
+        let currentLink = navLinks.find(
+            (a) => a.host === location.host && a.pathname === location.pathname,
+        );
+
+        if (currentLink) {
+            currentLink.classList.add('current');
+        }
+    </script>
     <h1>Contact</h1>
     <form action="mailto:jankytubba@gmail.com" method="POST" enctype="text/plain">
         <label>Email: <input name="email" type="email"></label>

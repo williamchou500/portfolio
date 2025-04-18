@@ -8,15 +8,26 @@
     <script type="module" src="../global.js"></script>
 </head>
 <body>
-    <a>
-        <nav>
-            <a class="nav" href="https://williamchou500.github.io/portfolio/">Home</a> 
-            <a class="nav" href="https://williamchou500.github.io/portfolio/projects">Projects</a>
-            <a class="nav" href="https://williamchou500.github.io/portfolio/profile">CV</a>
-            <a class="nav" href="https://williamchou500.github.io/portfolio/contact">Contact</a>
-            <a class="nav" href="https://github.com/williamchou500" target="_blank">GitHub</a>
-        </nav>
-    </a>
+    <nav>
+        <a class="nav" href="https://williamchou500.github.io/portfolio/">Home</a> 
+        <a class="nav" href="https://williamchou500.github.io/portfolio/projects">Projects</a>
+        <a class="nav" href="https://williamchou500.github.io/portfolio/profile">CV</a>
+        <a class="nav" href="https://williamchou500.github.io/portfolio/contact">Contact</a>
+        <a class="nav" href="https://github.com/williamchou500" target="_blank">GitHub</a>
+    </nav>
+    <script type="module">
+        import "./global.js";
+            
+        let navLinks = $$("nav a");
+    
+        let currentLink = navLinks.find(
+            (a) => a.host === location.host && a.pathname === location.pathname,
+        );
+    
+        if (currentLink) {
+            currentLink.classList.add('current');
+        }
+    </script>
     <h1>Projects</h1>
     <div class="projects">
         <article>
