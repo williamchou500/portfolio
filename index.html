@@ -8,26 +8,28 @@
     <script type="module" src="global.js"></script>
 </head>
 <body>
-
+    <nav>
+        <a href="https://williamchou500.github.io/portfolio/">Home</a> 
+        <a href="https://williamchou500.github.io/portfolio/projects/">Projects</a>
+        <a href="https://williamchou500.github.io/portfolio/profile/">CV</a>
+        <a href="https://williamchou500.github.io/portfolio/contact/">Contact</a>
+        <a href="https://github.com/williamchou500" target="_blank">GitHub</a>
+    </nav>
     <script type="module">
-        let navLinks = $$("nav a")
+        function $$(selector, context = document) {
+            return Array.from(context.querySelectorAll(selector));
+        }
+
+        let navLinks = $$("nav a");
 
         let currentLink = navLinks.find(
             (a) => a.host === location.host && a.pathname === location.pathname,
         );
 
         if (currentLink) {
-            currentLink.classList.add('current')
+            currentLink.classList.add('current');
         }
     </script>
-
-    <nav>
-        <a href="https://williamchou500.github.io/portfolio/">Home</a> 
-        <a href="https://williamchou500.github.io/portfolio/projects">Projects</a>
-        <a href="https://williamchou500.github.io/portfolio/profile">CV</a>
-        <a href="https://williamchou500.github.io/portfolio/contact">Contact</a>
-        <a href="https://github.com/williamchou500" target="_blank">GitHub</a>
-    </nav>
     <h1>William Chou</h1>
     <p>I like playing games, and I think oatmeal raisin cookies are the best kind of cookie. I was born on June 2nd, 2005 and am currently 19 years old. Some of my favorite games are Omori, Oneshot, Neon White, Persona 4 Golden, and Ace Attorney. I hate Marvel Rivals.</p>
     <img src="images/chipeyes.jpg" alt='A picture of me with casino chips over my eyes' width="300">
