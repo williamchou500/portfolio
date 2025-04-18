@@ -186,6 +186,7 @@ article.CV {
 }
 
 a.recipes_project:hover {
+  text-decoration: none;
   font-weight: bolder;
   color: yellow;
   border-bottom-width: 0.4em;
