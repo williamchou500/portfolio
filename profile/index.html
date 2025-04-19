@@ -9,7 +9,7 @@
 </head>
 <body>
     <script type="module">
-        import "./global.js";
+        import "../global.js";
 
         const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
             ? "/"                  // Local server
@@ -71,6 +71,23 @@
             select.value = localStorage.colorScheme;
             document.documentElement.style.setProperty('color-scheme', localStorage.colorScheme);
         }
+
+        import "../global.js";
+
+        let form = document.querySelector("form");
+
+        form?.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            let data = new FormData(form);
+            let url = form.action + '?';
+
+            for (let [name, value] of data) {
+                url += encodeURIComponent(name) + '=' + encodeURIComponent(value) + '&';
+                console.log(name, value);
+            }
+        location.href=url;
+        });
     </script>
     <h1 class="tooltip">William Chou
         <img class="tooltipimage" src="../images/scary.jpg" width="500px">

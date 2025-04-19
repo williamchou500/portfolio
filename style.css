@@ -194,13 +194,23 @@ article.CV {
   gap: 1em
 }
 
+a.recipes_project {
+  border: 0ch;
+}
+
 a.recipes_project:hover {
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: bolder;
-  color: yellow;
-  border-bottom-width: 0.4em;
+  color: orange;
+  border-bottom-width: 0.2em;
   border-bottom-style: groove;
   border-bottom-color: pink;
+  background-color: transparent;
+  padding-bottom: 0px;
+}
+
+a.vehicles_project {
+  border: 0ch;
 }
 
 a.vehicles_project:hover {
