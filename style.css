@@ -244,7 +244,7 @@ a.vehicles_project:hover {
 label.color-scheme {
   display: block; 
   position: absolute;
-  top: 10px;
+  top: 5px;
   right: 1rem;
   font-family: inherit;
   font-size: 80%;
