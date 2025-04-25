@@ -1,33 +1,45 @@
 [
     {
-        "title": "I CAN CHANGE",
+        "title": "Processing and Cholesterol: Are Unprocessed Foods Really More Healthy?",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum error sapiente consequatur, nostrum laborum odio fugiat facere voluptatem. Eum quibusdam ipsum aspernatur sit ad velit atque perspiciatis. Accusantium, dignissimos hic."
+        "description": "Analyzed a dataset containing food products from Walmart, Target, and Whole Foods and found that unprocessed Target foods strayed from the other two stores and contained much more cholesterol than expected"
     },
     {
-        "title": "I didn't want this...",
+        "title": "Do 4 Wheels Lead to a 4.00 and 4 Years of Fun?: THe Role of Personal Vehicles at UC San Diego",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Accusamus error facilis ipsum vitae obcaecati? Necessitatibus at accusantium, veritatis dolores praesentium delectus autem et sequi sed corporis natus quidem doloribus exercitationem dolore. Nulla unde ducimus placeat accusamus? Numquam, quod?"
+        "description": "Our group wanted to see the impact of having access to a car on UCSD students’ social wellness and academic achievement. Through the survey data (142 participants) we analyzed factors including car ownership, social satisfaction, GPA, and variables such as living situation, academic workload, and major. We found that vehicle access alone does not significantly affect social life satisfaction or GPA. Regression analysis showed that factors such as major, year in school, and extracurricular involvement in conjunction with access to a personal vehicle play a larger role in influencing both social and academic success. While access to a car provides greater flexibility and social opportunities, that factor does not define one's level of satisfaction with their social life or GPA alone."
     },
     {
-        "title": "Libero perferendis laborum similique?",
+        "title": "Analysis of the Relationship Between Nutritional Value and Recipe Ratings",
+        "year": 2025,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Magnam, nisi. Eos, error facere? Excepturi necessitatibus, illo sit laborum, consequuntur, quasi perferendis veritatis aperiam dignissimos architecto repellat dicta ad ab cum odio? Autem odit eveniet praesentium quas eum consectetur."
+        "description": "I have always understood that eating healthy diet is an essential part of leading a healthy life, but unhealthy foods that are high in carbohydrates, sodium, fats, etc. tend to be more delicious and bring a lot of immediate happiness in the short term. This led me to question how this dilemma would be reflected in food reviews for recipes online. Would the health benefits of a food boost the reception of a recipe or is taste and satisfaction more important to reviewers?"
     },
     {
-        "title": "Voluptatum laudantium dolorum expedita.",
+        "title": "Assignment 05: Images",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Deserunt cupiditate iure, voluptas repudiandae dignissimos unde hic nisi, eveniet laudantium recusandae iste? Iste, quasi aliquid non dolorem animi ad eligendi reprehenderit asperiores unde. At ea voluptate fugit aliquam! Saepe!"
+        "description": "Created a set of functions that applied filters to a picture to make it scarier"
     },
     {
-        "title": "Alias quidem odit illo?",
+        "title": "Assignment 04: Health Data",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Suscipit qui minus consequuntur nemo, cupiditate velit laborum distinctio enim sint odio voluptates omnis iure similique amet non laudantium ab architecto ex natus inventore et quibusdam? Quidem totam nemo accusantium."
+        "description": "Analysis and comparison of Sensors Made to Measure Sleep Patterns"
     },
     {
-        "title": "Deleniti, porro quam! Aliquid!",
+        "title": "Assignment 03: Audio",
+        "year": 2024,
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Eaque totam quis, recusandae quam adipisci vero saepe ut hic velit quod dolorum corrupti doloremque, ipsa, eligendi nam quisquam magni animi facere aperiam cumque ducimus voluptas. Sunt aspernatur veritatis explicabo."
+        "description": "Tested how accurately a Speech Recognition API could convert speech to text with noise added and compared how well it performed versus my roommate"
+    },
+    {
+        "title": "Assignment 02: Text Processing",
+        "year": 2024,
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Scraped wikipedia and performed sentiment analysis to see if wikipedia is truly unbiased"
     },
     {
         "title": "Soluta explicabo fugiat dolor.",
@@ -53,10 +65,5 @@
         "title": "Ipsum suscipit nemo deleniti?",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Perferendis laudantium distinctio qui id sint, aut totam natus debitis labore doloribus maiores voluptas cum quaerat aliquam voluptates modi, minus est veniam molestias sequi hic sed saepe. Quos, unde aliquam."
-    },
-    {
-        "title": "Nihil rerum vel vitae?",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Odio vitae provident voluptate magni fugiat perspiciatis explicabo id cumque illo minus optio, officiis alias saepe voluptatem quo! Corporis saepe mollitia asperiores culpa tenetur, amet veniam non cupiditate suscipit facilis."
     }
 ]
