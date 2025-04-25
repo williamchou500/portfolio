@@ -2,73 +2,73 @@
     {
         "title": "Processing and Cholesterol: Are Unprocessed Foods Really More Healthy?",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "description": "Analyzed a dataset containing food products from Walmart, Target, and Whole Foods and found that unprocessed Target foods strayed from the other two stores and contained much more cholesterol than expected"
     },
     {
         "title": "Do 4 Wheels Lead to a 4.00 and 4 Years of Fun?: The Role of Personal Vehicles at UC San Diego",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Our group wanted to see the impact of having access to a car on UCSD students’ social wellness and academic achievement. Through the survey data (142 participants) we analyzed factors including car ownership, social satisfaction, GPA, and variables such as living situation, academic workload, and major. We found that vehicle access alone does not significantly affect social life satisfaction or GPA. Regression analysis showed that factors such as major, year in school, and extracurricular involvement in conjunction with access to a personal vehicle play a larger role in influencing both social and academic success. While access to a car provides greater flexibility and social opportunities, that factor does not define one's level of satisfaction with their social life or GPA alone."
+        "image": "https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+        "description": "Our group wanted to see the impact of having access to a car on UCSD students’ social wellness and academic achievement. Through the survey data (142 participants) we analyzed factors including car ownership, social satisfaction, GPA, and variables such as living situation, academic workload, and major."
     },
     {
         "title": "Analysis of the Relationship Between Nutritional Value and Recipe Ratings",
         "year": "2025",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg",
         "description": "I have always understood that eating healthy diet is an essential part of leading a healthy life, but unhealthy foods that are high in carbohydrates, sodium, fats, etc. tend to be more delicious and bring a lot of immediate happiness in the short term. This led me to question how this dilemma would be reflected in food reviews for recipes online. Would the health benefits of a food boost the reception of a recipe or is taste and satisfaction more important to reviewers?"
     },
     {
         "title": "Assignment 05: Images",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/10082741/pexels-photo-10082741.jpeg",
         "description": "Created a set of functions that applied filters to a picture to make it scarier"
     },
     {
         "title": "Assignment 04: Health Data",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg",
         "description": "Analysis and comparison of Sensors Made to Measure Sleep Patterns"
     },
     {
         "title": "Assignment 03: Audio",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg",
         "description": "Tested how accurately a Speech Recognition API could convert speech to text with noise added and compared how well it performed versus my roommate"
     },
     {
         "title": "Assignment 02: Text Processing",
         "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/1309899/pexels-photo-1309899.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "description": "Scraped wikipedia and performed sentiment analysis to see if wikipedia is truly unbiased"
     },
     {
         "title": "Hopefully Won't Be a Terrorist: William Chou's Birth",
         "year": "2005",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/1973270/pexels-photo-1973270.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "description": "My mom is lying on the hospital bed attempting to give birth. I am testing if medicinal knowledge evolved enough for me to be born safely without harm being done to me or my mother."
     },
     {
         "title": "Are Time Travelers Real?",
         "year": "2004",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/359989/pexels-photo-359989.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "description": "My official birthdate is June 2, 2005, but I was alive before that for about 9 months or so. This has no explanation."
     },
     {
         "title": "Can my cries reach the heavens?",
         "year": "1994",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/54379/pexels-photo-54379.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "description": "I only started coding last year, so I don't have much projects. It makes me want to cry. How far away can people hear me crying? My sorrow must be exploited for the pursuit of knowledge."
     },
     {
         "title": "Was my birth predetermined by a higher being?",
         "year": "1993",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/3729557/pexels-photo-3729557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         "description": "What are the chances that my parents met and had me? And is it statistically significant given at the 0.05 level?"
     },
     {
         "title": "Was this the beginning or the end?",
         "year": "1990",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "image": "https://images.pexels.com/photos/29022331/pexels-photo-29022331/free-photo-of-abstract-colorful-infinity-symbol-on-soft-background.jpeg?auto=compress&cs=tinysrgb&w=1200",
         "description": "This is the earliest according to the year column, but I wrote this part last since I went from top to bottom. Would people see this as the beginning or the end? Analyzing survey data."
     }
 ]
