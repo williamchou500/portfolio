@@ -27,13 +27,13 @@
         "title": "Analysis of Sleep Sensors",
         "year": "2024",
         "image": "https://images.pexels.com/photos/3771069/pexels-photo-3771069.jpeg",
-        "description": "Analysis and comparison of Sensors Made to Measure Sleep Patterns"
+        "description": "Analysis and comparison of sensors made to measure sleep patterns"
     },
     {
         "title": "How Noisy is Too Noisy (For a Robot)?",
         "year": "2024",
         "image": "https://images.pexels.com/photos/3761509/pexels-photo-3761509.jpeg",
-        "description": "Tested how accurately a Speech Recognition API could convert speech to text with noise added and compared how well it performed versus my roommate"
+        "description": "Tested how accurately a speech recognition API could convert speech to text with noise added and compared how well it performed versus my roommate"
     },
     {
         "title": "Is Wikipedia Truly Unbiased?",
