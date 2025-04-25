@@ -13,8 +13,6 @@ export async function fetchJSON(url) {
         throw new Error(`Failed to fetch projects: ${response.statusText}`);
       }
 
-      console.log(response)
-
       const data = await response.json();
       return data;
 
@@ -39,4 +37,7 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     }
 }
 
+export async function fetchGitHubData(username) {
+    return fetchJSON(`https://api.github.com/users/${username}`);
+}
   

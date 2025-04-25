@@ -249,3 +249,24 @@ label.color-scheme {
   font-family: inherit;
   font-size: 80%;
 }
+
+dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  text-align: center;
+}
+
+dt {
+  display: flex;
+  grid-row: 1;
+  font-weight: bold;
+  color: gray;
+}
+
+dd {
+  display: flex;
+  grid-row: 2;
+  margin: 0;
+  font-size: 250%;
+}
