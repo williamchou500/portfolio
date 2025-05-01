@@ -282,6 +282,7 @@ dd {
   display: grid;
   grid-template-columns: repear(auto-fill, minmax(9em, 1fr));
   gap: 3em;
+  flex: 1;
 }
 
 .swatch {
@@ -295,6 +296,10 @@ dd {
 .pie-chart-legend-key {
   display: flex;
   align-items: center;
-  gap: 2em;
-  grid-row: 1;
+  gap: 1em;
+}
+
+.pie-chart-container {
+  display: flex;
+  align-items: flex-start;
 }
