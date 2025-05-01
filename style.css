@@ -270,3 +270,31 @@ dd {
   margin: 0;
   font-size: 250%;
 }
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repear(auto-fill, minmax(9em, 1fr));
+  gap: 3em;
+}
+
+.swatch {
+  display: inline-flex;
+  width: 2em;
+  aspect-ratio: 1/1;
+  background-color: var(--color);
+  border-radius: 35%;
+}
+
+.pie-chart-legend-key {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  grid-row: 1;
+}
