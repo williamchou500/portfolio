@@ -87,7 +87,8 @@ function renderPieChart(projectsGiven) {
                   .selectAll('path')
                   .attr('class', (_, idx) => (
                     selectedIndex === idx ? 'selected' : ''
-                  ));
+                  )
+                );
             
                 legend
                   .selectAll('li')

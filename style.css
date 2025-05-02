@@ -339,5 +339,6 @@ path {
 
   &:is(path) {
     fill: var(--color);
+    transform: scale(1.1);
   }
 }
