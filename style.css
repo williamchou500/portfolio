@@ -298,7 +298,7 @@ dd {
   border-radius: 50%;
 }
 
-.pie-chart-legend-key {
+#pie-chart-legend-key {
   display: flex;
   align-items: center;
   gap: 10px;

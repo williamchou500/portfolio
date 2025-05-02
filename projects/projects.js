@@ -64,8 +64,7 @@ function renderPieChart(projectsGiven) {
         legend
             .append('li')
             .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-            .attr('class', 'pie-chart-legend-key')
-            .attr('id', `${idx}`)
+            .attr('id', 'pie-chart-legend-key')
             .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
     });
 
