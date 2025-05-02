@@ -82,9 +82,6 @@ function renderPieChart(projectsGiven) {
             .attr('d', arc)
             .attr('fill', colors(idx))
             .on('click', () => {
-
-                console.log(data);
-                
                 selectedIndex = selectedIndex === idx ? -1 : idx;
               
                 svg
