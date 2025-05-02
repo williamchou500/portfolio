@@ -103,7 +103,16 @@ function renderPieChart(projectsGiven) {
                     let filteredProjects = projects.filter(project =>
                     project.year === selectedYear
                 );
+                console.log(query);
+                if (query !== '') {
+                    let filteredAgain = filteredProjects.filter((project) => {
+                        let values = Object.values(project).join('\n').toLowerCase();
+                        return values.includes(query.toLowerCase());
+                    })
+                    renderProjects(filteredAgain, projectsContainer, 'h2');
+                } else {
                     renderProjects(filteredProjects, projectsContainer, 'h2');
+                }
                 }
               });
             });
