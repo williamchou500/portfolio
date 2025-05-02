@@ -61,15 +61,57 @@ function renderPieChart(projectsGiven) {
     let legend = d3.select('.legend');
 
     data.forEach((d, idx) => {
-    legend
-        .append('li')
-        .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
-        .attr('class', 'pie-chart-legend-key')
-        .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
+        legend
+            .append('li')
+            .attr('style', `--color:${colors(idx)}`) // set the style attribute while passing in parameters
+            .attr('class', 'pie-chart-legend-key')
+            .attr('id', `${idx}`)
+            .html(`<span class="swatch"></span> ${d.label} <em>(${d.value})</em>`); // set the inner html of <li>
     });
 
     arcs.forEach((arc, index) => {
         d3.select('svg').append('path').attr('d', arc).attr('fill', colors(index))
+
+        let selectedIndex = -1;
+
+        let svg = d3.select('svg');
+        svg.selectAll('path').remove();
+        arcs.forEach((arc, idx) => {
+          svg
+            .append('path')
+            .attr('d', arc)
+            .attr('fill', colors(idx))
+            .on('click', () => {
+
+                console.log(data);
+                
+                selectedIndex = selectedIndex === idx ? -1 : idx;
+              
+                svg
+                  .selectAll('path')
+                  .attr('class', (_, idx) => (
+                    selectedIndex === idx ? 'selected' : ''
+                  ));
+            
+                legend
+                  .selectAll('li')
+                  .attr('class', (_, idx) => (
+                    selectedIndex === idx ? 'selected' : ''
+                  ));
+                
+                if (selectedIndex === -1) {
+                    renderProjects(projects, projectsContainer, 'h2');
+                } else {
+                    let selectedYear = data[selectedIndex].label;
+                    let filteredProjects = projects.filter(project =>
+                    project.year === selectedYear
+                );
+                    console.log(filteredProjects);
+                    console.log(selectedYear);
+                    renderProjects(filteredProjects, projectsContainer, 'h2');
+                }
+              });
+            });
     });
 }
 
@@ -89,8 +131,3 @@ searchInput.addEventListener('change', (event) => {
     renderProjects(filteredProjects, projectsContainer, 'h2');
     renderPieChart(filteredProjects)
 });
-
-
-
-
-
