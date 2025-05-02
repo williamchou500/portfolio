@@ -106,8 +106,6 @@ function renderPieChart(projectsGiven) {
                     let filteredProjects = projects.filter(project =>
                     project.year === selectedYear
                 );
-                    console.log(filteredProjects);
-                    console.log(selectedYear);
                     renderProjects(filteredProjects, projectsContainer, 'h2');
                 }
               });
