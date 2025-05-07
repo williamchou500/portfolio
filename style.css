@@ -258,17 +258,17 @@ dl {
 }
 
 dt {
-  display: flex;
+  display: bloc;
   grid-row: 1;
   font-weight: bold;
   color: gray;
 }
 
 dd {
-  display: flex;
+  display: block;
   grid-row: 2;
   margin: 0;
-  font-size: 250%;
+  font-size: 125%;
 }
 
 #projects-pie-plot {
@@ -341,4 +341,10 @@ path {
     fill: var(--color);
     transform: scale(1.1);
   }
+}
+
+#stats {
+  display: block;
+  column-gap: 1em;
+  row-gap: 0.5em;
 }
