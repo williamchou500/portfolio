@@ -252,20 +252,20 @@ label.color-scheme {
 
 dl {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto, 1fr);
   grid-template-rows: auto auto;
   text-align: center;
 }
 
 dt {
-  display: bloc;
+  display: flex;
   grid-row: 1;
   font-weight: bold;
   color: gray;
 }
 
 dd {
-  display: block;
+  display: flex;
   grid-row: 2;
   margin: 0;
   font-size: 125%;
@@ -341,10 +341,4 @@ path {
     fill: var(--color);
     transform: scale(1.1);
   }
-}
-
-#stats {
-  display: block;
-  column-gap: 1em;
-  row-gap: 0.5em;
 }

@@ -72,9 +72,6 @@ function processCommits(data) {
     dl.append('dt').text('Authors');
     dl.append('dd').text(d3.groups(data, d => d.author).length);
 
-    dl.append('dt').text('Files');
-    dl.append('dd').text(d3.groups(data, d => d.file).length);
-
     const fileLengths = d3.rollups(
         data,
         (v) => d3.max(v, (v) => v.line),
@@ -89,6 +86,9 @@ function processCommits(data) {
 
     dl.append('dt').text('Longest Line');
     dl.append('dd').text(maxLineLength);
+
+    dl.append('dt').text('Files');
+    dl.append('dd').text(d3.groups(data, d => d.file).length);
   }
   
   let data = await loadData();
