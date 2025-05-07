@@ -342,3 +342,7 @@ path {
     transform: scale(1.1);
   }
 }
+
+.gridlines {
+  opacity:0.25;
+}
