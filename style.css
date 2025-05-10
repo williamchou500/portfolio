@@ -356,15 +356,18 @@ dl.info {
   border-width: 2px;
   border-color: gray;
   border-style: solid;
-  visibility: hidden;
-  padding: 5px;
+  padding: 1em;
+  box-shadow: 10px 5px 5px gray;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
 
   & dt {
     display: flex;
     grid-row: 1;
     font-weight: bold;
     color: gray;
-    padding: 3px;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
 
   & dd {
@@ -372,8 +375,14 @@ dl.info {
     grid-row: 2;
     margin: 0;
     font-size: 125%;
-    padding: 3px;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
   }
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .tooltip {

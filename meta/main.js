@@ -94,6 +94,9 @@ renderCommitInfo(data, commits);
 function renderTooltipContent(commit) {
     const link = document.getElementById('commit-link');
     const date = document.getElementById('commit-date');
+    const time = document.getElementById('commit-time');
+    const author = document.getElementById('commit-author');
+    const lines = document.getElementById('commit-lines');
   
     if (Object.keys(commit).length === 0) return;
   
@@ -102,6 +105,14 @@ function renderTooltipContent(commit) {
     date.textContent = commit.datetime?.toLocaleString('en', {
       dateStyle: 'full',
     });
+    time.textContent = commit.time;
+    author.textContent = commit.author;
+    lines.textContent = commit.totalLines;
+  }
+
+function updateTooltipVisibility(isVisible) {
+    const tooltip = document.getElementById('commit-tooltip');
+    tooltip.hidden = !isVisible;
   }
 
 function renderScatterPlot(data, commits) {
@@ -177,11 +188,14 @@ function renderScatterPlot(data, commits) {
     .attr('fill', 'steelblue')
     .on('mouseenter', (event, commit) => {
         renderTooltipContent(commit);
-        d3.select('.info').style('visibility', 'visible');
+        updateTooltipVisibility(true);
       })
       .on('mouseleave', () => {
-        d3.select('.info').style('visibility', 'hidden');
+        updateTooltipVisibility(false);
       });    
+
+      console.log(data)
+      console.log(commits)
 }
    
 renderScatterPlot(data, commits);
