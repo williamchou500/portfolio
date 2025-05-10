@@ -36,7 +36,7 @@ nav {
   border-bottom-color: oklch(50% 10% 200 / 40%);
 }
 
-a {
+a.nav_link {
   flex: 1;
   text-decoration: none;
   color: inherit;
@@ -250,25 +250,25 @@ label.color-scheme {
   font-size: 80%;
 }
 
-dl {
+dl.stats {
   display: grid;
   grid-template-columns: repeat(auto, 1fr);
   grid-template-rows: auto auto;
   text-align: center;
-}
 
-dt {
-  display: flex;
-  grid-row: 1;
-  font-weight: bold;
-  color: gray;
-}
+  & dt {
+    display: flex;
+    grid-row: 1;
+    font-weight: bold;
+    color: gray;
+  }
 
-dd {
-  display: flex;
-  grid-row: 2;
-  margin: 0;
-  font-size: 125%;
+  & dd {
+    display: flex;
+    grid-row: 2;
+    margin: 0;
+    font-size: 125%;
+  }
 }
 
 #projects-pie-plot {
@@ -345,4 +345,49 @@ path {
 
 .gridlines {
   opacity:0.25;
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: auto auto;
+  text-align: center;
+  background-color: white;
+  border-width: 2px;
+  border-color: gray;
+  border-style: solid;
+  visibility: hidden;
+  padding: 5px;
+
+  & dt {
+    display: flex;
+    grid-row: 1;
+    font-weight: bold;
+    color: gray;
+    padding: 3px;
+  }
+
+  & dd {
+    display: flex;
+    grid-row: 2;
+    margin: 0;
+    font-size: 125%;
+    padding: 3px;
+  }
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
 }

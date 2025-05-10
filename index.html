@@ -38,6 +38,7 @@
             let a = document.createElement('a');
             a.href = url;
             a.textContent = title;
+            a.setAttribute('class', 'nav_link')
             nav.append(a);
 
             if (a.host === location.host && a.pathname === location.pathname) {
