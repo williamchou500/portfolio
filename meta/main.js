@@ -337,6 +337,8 @@ function updateScatterPlot(data, commits) {
     .selectAll('circle')
     .data(sortedCommits, (d) => d.id)
     .join('circle')
+    .transition()
+    .duration(750)
     .attr('cx', (d) => xScale(d.datetime))
     .attr('cy', (d) => yScale(d.hourFrac))
     .attr('r', (d) => rScale(d.totalLines))
