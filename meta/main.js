@@ -409,6 +409,7 @@ let commitMaxTime = timeScale.invert(commitProgress);
 
 const timeSlider = document.getElementById('commit-progress');
 const selectedTime = document.getElementById('commit-time');
+let colors = d3.scaleOrdinal(d3.schemeTableau10);
 
 selectedTime.textContent = commitMaxTime.toLocaleString()
 
@@ -447,7 +448,8 @@ function updateFileDisplay(filteredCommits) {
     .selectAll('div')
     .data((d) => d.lines)
     .join('div')
-    .attr('class', 'loc');
+    .attr('class', 'loc')
+    .attr('style', (d) => `--color: ${colors(d.type)}`);
   }
 
 
@@ -467,3 +469,4 @@ function onTimeSliderChange() {
 updateFileDisplay(filteredCommits); 
 
 timeSlider.addEventListener('input', onTimeSliderChange);
+
