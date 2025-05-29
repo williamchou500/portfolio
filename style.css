@@ -393,7 +393,7 @@ dl.info[hidden]:not(:hover, :focus-within) {
 }
 
 circle {
-  transition: 200ms;
+  transition: all 200ms, r calc(var(--r) * 100 ms);
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -418,4 +418,8 @@ circle:hover {
 
 circle.selected {
   fill: #ff6b6b;
+}
+
+@starting-style {
+  r: 0;
 }
