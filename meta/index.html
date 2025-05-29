@@ -90,9 +90,18 @@
         location.href=url;
         });
     </script>
+
     <h1>Meta</h1>
 
     <p>This is meta.</p>
+
+    <div style="flex: 1; align-items:baseline;" class="slider">
+    <label style="margin-left: auto;">Show commits until:
+    <input id='commit-progress' type="range" min="0" max="100" value="100">
+    <time id='commit-time' style="margin-left: auto;">11:59</time>
+    <em id='any-time' style="display: block; text-align:right">(any time)</em>
+    </label>
+    </div>
 
     <div id="stats"></div>
 

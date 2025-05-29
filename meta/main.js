@@ -264,12 +264,14 @@ function renderScatterPlot(data, commits) {
     svg
     .append('g')
     .attr('transform', `translate(0, ${usableArea.bottom})`)
+    .attr('class', 'x-axis')
     .call(xAxis);
 
     // Add Y axis
     svg
     .append('g')
     .attr('transform', `translate(${usableArea.left}, 0)`)
+    .attr('class', 'y-axis')
     .call(yAxis);
 
     const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
@@ -298,3 +300,130 @@ function renderScatterPlot(data, commits) {
 }
    
 renderScatterPlot(data, commits);
+
+function updateScatterPlot(data, commits) {
+  const width = 1000;
+  const height = 600;
+  const margin = { top: 10, right: 10, bottom: 30, left: 20 };
+  const usableArea = {
+    top: margin.top,
+    right: width - margin.right,
+    bottom: height - margin.bottom,
+    left: margin.left,
+    width: width - margin.left - margin.right,
+    height: height - margin.top - margin.bottom,
+  };
+
+  const svg = d3.select('#chart').select('svg');
+
+  xScale = xScale.domain(d3.extent(commits, (d) => d.datetime));
+
+  const [minLines, maxLines] = d3.extent(commits, (d) => d.totalLines);
+  const rScale = d3.scaleSqrt().domain([minLines, maxLines]).range([2, 30]);
+
+  const xAxis = d3.axisBottom(xScale);
+
+  // CHANGE: we should clear out the existing xAxis and then create a new one.
+  const xAxisGroup = svg.select('g.x-axis');
+  xAxisGroup.selectAll('*').remove();
+  xAxisGroup.call(xAxis);
+
+  const dots = svg.select('g.dots');
+
+  const sortedCommits = d3.sort(commits, (d) => -d.totalLines);
+  dots
+    .selectAll('circle')
+    .data(sortedCommits)
+    .join('circle')
+    .attr('cx', (d) => xScale(d.datetime))
+    .attr('cy', (d) => yScale(d.hourFrac))
+    .attr('r', (d) => rScale(d.totalLines))
+    .attr('fill', 'steelblue')
+    .style('fill-opacity', 0.7) // Add transparency for overlapping dots
+    .on('mouseenter', (event, commit) => {
+      d3.select(event.currentTarget).style('fill-opacity', 1); // Full opacity on hover
+      renderTooltipContent(commit);
+      updateTooltipVisibility(true);
+      updateTooltipPosition(event);
+    })
+    .on('mouseleave', (event) => {
+      d3.select(event.currentTarget).style('fill-opacity', 0.7);
+      updateTooltipVisibility(false);
+    });
+}
+
+function updateCommitInfo(data, commits) {
+    // Create the dl element
+    const dl = d3.select('#stats').select('dl');
+    dl.selectAll('*').remove();
+
+    // Add total LOC
+    dl.append('dt').html('Total&nbsp;<abbr title="Lines of code">LOC</abbr>');
+    dl.append('dd').text(data.length);
+  
+    // Add total commits
+    dl.append('dt').text('Total commits');
+    dl.append('dd').text(commits.length);
+  
+    // Add more stats as needed...
+    const workByPeriod = d3.rollups(
+        data,
+        (v) => v.length,
+        (d) => new Date(d.datetime).toLocaleString('en', { dayPeriod: 'short' }),
+      );
+
+    const maxPeriod = d3.greatest(workByPeriod, (d) => d[1])?.[0];
+
+    dl.append('dt').text('Working Hours');
+    dl.append('dd').text(maxPeriod);
+
+    dl.append('dt').text('Authors');
+    dl.append('dd').text(d3.groups(data, d => d.author).length);
+
+    const fileLengths = d3.rollups(
+        data,
+        (v) => d3.max(v, (v) => v.line),
+        (d) => d.length,
+      );
+
+    const maxLineLength = d3.greatest(fileLengths, (d) => d[0])[0];
+
+    dl.append('dt').text('Longest Line');
+    dl.append('dd').text(maxLineLength);
+
+    dl.append('dt').text('Files');
+    dl.append('dd').text(d3.groups(data, d => d.file).length);
+  }
+  
+
+let commitProgress = 100;
+
+let timeScale = d3
+  .scaleTime()
+  .domain([
+    d3.min(commits, (d) => d.datetime),
+    d3.max(commits, (d) => d.datetime),
+  ])
+  .range([0, 100]);
+let commitMaxTime = timeScale.invert(commitProgress);
+
+const timeSlider = document.getElementById('commit-progress');
+const selectedTime = document.getElementById('commit-time');
+
+selectedTime.textContent = commitMaxTime.toLocaleString()
+
+// Will get updated as user changes slider
+let filteredCommits = commits;
+
+function onTimeSliderChange() {
+  commitProgress = Number(timeSlider.value);
+  commitMaxTime = timeScale.invert(commitProgress);
+  selectedTime.textContent = commitMaxTime.toLocaleString();
+  filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
+
+  updateScatterPlot(data, filteredCommits);
+
+  updateCommitInfo(data, filteredCommits);
+}
+
+timeSlider.addEventListener('input', onTimeSliderChange);
