@@ -504,7 +504,6 @@ function onStepEnter(response) {
 
   updateScatterPlot(data, filteredCommits);
   updateCommitInfo(data, filteredCommits);
-  updateFileDisplay(filteredCommits);
 }
 
 const scroller = scrollama();
